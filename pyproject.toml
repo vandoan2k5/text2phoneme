@@ -1,0 +1,18 @@
+[project]
+name = "text2phoneme"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "datasets>=5.0.0",
+    "ipykernel>=7.3.0",
+    "piper-phonemize>=1.3.0",
+    "torch>=2.12.1",
+    "torchvision>=0.27.1",
+    "transformers>=5.12.1",
+    "wrapt>=2.2.2",
+]
+
+[tool.uv]
+find-links = ["https://k2-fsa.github.io/icefall/piper_phonemize.html"]
