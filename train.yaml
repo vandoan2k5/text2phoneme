@@ -1,0 +1,36 @@
+model_config: model/model.yaml
+
+data:
+  root: /kaggle/text2phoneme/interleaved_vi_en
+  dataset_names:
+    - vietnamese_subset
+    - english_subset
+    - interleaved_subset
+  phoneme_token_files:
+    - /kaggle/text2phoneme/resource/phoneme_vi.txt
+    - /kaggle/text2phoneme/resource/phoneme_en.txt
+  vi_lang: vi
+  en_lang: en
+  eval_ratio: 0.01
+  vocab_sample_size: 50000
+  text_tokenizer_vocab_size: 4096
+  text_tokenizer_min_frequency: 2
+  dataset_sample_limits:
+    vietnamese_subset: 1000000
+    english_subset: 1000000
+    interleaved_subset: 90000
+  max_train_samples: null
+  max_eval_samples: 512
+
+training:
+  seed: 42
+  epochs: 1
+  batch_size: 32
+  eval_batch_size: 48
+  learning_rate: 0.0003
+  weight_decay: 0.01
+  max_grad_norm: 1.0
+  num_workers: 2
+
+artifacts:
+  dir: /kaggle/text2phoneme/.checkpoints
