@@ -21,13 +21,13 @@ Seq2seq encoder-decoder Transformer cho bài toán text-to-phoneme, dùng `piper
 
 ## File chính
 
-- [dataset.py](/kaggle/text2phoneme/dataset.py)
-- [model/net.py](/kaggle/text2phoneme/model/net.py)
-- [train.py](/kaggle/text2phoneme/train.py)
-- [inference.py](/kaggle/text2phoneme/inference.py)
-- [model/model.yaml](/kaggle/text2phoneme/model/model.yaml)
-- [train.yaml](/kaggle/text2phoneme/train.yaml)
-- [smoke.yaml](/kaggle/text2phoneme/smoke.yaml)
+- [dataset.py](./dataset.py)
+- [model/net.py](./model/net.py)
+- [train.py](./train.py)
+- [inference.py](./inference.py)
+- [model/model.yaml](./model/model.yaml)
+- [train.yaml](./train.yaml)
+- [smoke.yaml](./smoke.yaml)
 
 ## Cấu hình
 

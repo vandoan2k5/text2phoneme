@@ -1,0 +1,45 @@
+model_config: model/model.yaml
+
+model:
+  d_model: 128
+  nhead: 4
+  num_encoder_layers: 2
+  num_decoder_layers: 2
+  dim_feedforward: 256
+  max_source_length: 256
+  max_target_length: 320
+
+data:
+  root: /kaggle/text2phoneme/interleaved_vi_en
+  dataset_names:
+    - vietnamese_subset
+    - english_subset
+    - interleaved_subset
+  phoneme_token_files:
+    - /kaggle/text2phoneme/resource/phoneme_vi.txt
+    - /kaggle/text2phoneme/resource/phoneme_en.txt
+  vi_lang: vi
+  en_lang: en
+  eval_ratio: 0.05
+  vocab_sample_size: 2000
+  text_tokenizer_vocab_size: 1024
+  text_tokenizer_min_frequency: 2
+  dataset_sample_limits:
+    vietnamese_subset: 256
+    english_subset: 256
+    interleaved_subset: 256
+  max_train_samples: 640
+  max_eval_samples: 96
+
+training:
+  seed: 42
+  epochs: 5
+  batch_size: 16
+  eval_batch_size: 16
+  learning_rate: 0.0005
+  weight_decay: 0.01
+  max_grad_norm: 1.0
+  num_workers: 2
+
+artifacts:
+  dir: /kaggle/text2phoneme/artifacts_smoke
